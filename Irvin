@@ -1,0 +1,36 @@
+/* This program will play a simple guessing game.
+ * The user will guess, and the computer should print if
+ * the guess was too high, too low, or correct.
+ */
+ 
+ var correctNumber = Randomizer.nextInt(1,100);
+ 
+function start() {
+     while(true){
+
+        var firstRoll = readInt("Guess a random number!");
+
+        if(correctNumber < firstRoll){
+
+            println("Your guess is too high! ");
+
+        }
+
+        if(correctNumber > firstRoll){
+
+            println("Your guess is too low! ");
+
+            break;
+
+        }
+
+        if(correctNumber == firstRoll){
+
+            print("You guessed correctly! ");
+
+        }
+
+    }
+
+    println(correctNumber);
+}
